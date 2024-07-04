@@ -1,0 +1,79 @@
+/*----------CSS--------*/
+
+
+/*----------------Root----------------------*/
+:root{
+    --background:#2b151f;
+    --title-box: #ddd;
+    --sidebar: #66adb0;
+    --content-box:#d1951b;
+    --content-text:#f4f4f4;
+    --footer: #107e5f;
+    --shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    --button-box: #cd7ab5;
+    --button-hover: #e2a6d1;
+    --button-active: #7d446d;
+    --url:#fff1e6;
+    --url-hover:#fffaf6;
+    --url-active:#e7d7cb;
+    }
+
+/* ------ Page Layout ----- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+[class*="col-"] {
+    float: left;
+    padding: 5px;
+    border: 1px solid red;
+}
+  
+  .col-1 {width: 10%;}
+  .col-2 {width: 20%;}
+  .col-3 {width: 30%;}
+  .col-4 {width: 40%;}
+  .col-5 {width: 50%;}
+  .col-6 {width: 60%;}
+  .col-7 {width: 70%;}
+  .col-8 {width: 80%;}
+  .col-9 {width: 90%;}
+  .col-10 {width: 100%;}
+
+.header {
+    background-color: var(--title-box);
+    color: #000;
+}
+
+.menu {
+    background-color: var(--sidebar);
+    color: #ffffff;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+.main {
+    background-color: var(--content-box);
+    color: #ffffff;
+}
+
+.footer {
+    background-color: var(--footer);
+    color: #ffffff;
+    text-align: center;
+  }
