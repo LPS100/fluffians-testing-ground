@@ -13,25 +13,7 @@
         <h1>Fluffian's Testing Ground</h1>
     </div>
   <div class="row">
-      <div class="col-2 col-m-3 menu"> <!--20%-->
-        <div class="buttongrid">
-          <button class="button3"><a href="/character-design">Character Design</a></button>
-          <button class="button4"><a href="/graphic-design">Graphic Design</a></button>
-          <button class="button2"><a href="/illustrations">Illustrations</a></button>
-          <button class="button5"><a href="/who'-the-artist">Who's the Artist</a></button>
-          <button class="button6"><a href="/curriculum-vitae">Curriculum Vitae</a></button>
-          <button class="button7"><a href="/contact">Contact</a></button>
-        </div>
-          <!--
-          <ul id="navbox">
-            <li><a class="active" href="#home">LINK #1</a></li>
-            <li><a href="#news">LINK #2</a></li>
-            <li><a href="#news">LINK #3</a></li>
-            <li><a href="#news">LINK #4</a></li>
-          </ul>
-              
-          -->
-      </div>
+      <div id="menu"></div>
       <div class="col-1 col-m-1 divider"></div>
       <div class="col-9 col-m-9 main"> <!--80%-->
           <h2>Bee Movie Script</h2>
@@ -68,6 +50,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
 <script> 
 $(function(){
+  $("#menu").load("menu.html")
   $("#footer").load("footer.html");
 });
 </script> 
