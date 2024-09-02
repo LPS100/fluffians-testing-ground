@@ -1,11 +1,77 @@
-/*----------CSS--------*/
+/*------------- FONT-FACE CANDARA --------------*/
+@font-face {
+    font-family: 'Candara', Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/candara.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Candara', Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/candarab.ttf');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 
-/*----------------Root----------------------*/
+@font-face {
+    font-family: 'Candara', Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/candarai.ttf');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Candara', Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/candaraz.ttf');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+/*------------- FONT-FACE CALIBRI -------------*/
+@font-face {
+    font-family: 'Calibri',Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/calibri.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calibri',Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/calibrib.ttf');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calibri',Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/calibrii.ttf');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calibri',Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/calibriz.ttf');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+/*------------------- ROOT  -------------------*/
 :root{
+    --header-font: 'Candara', Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    --body-font: 'Calibri',Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
     --background:#2b151f;
     --title-box: #ddd;
     --sidebar: #66adb0;
+    --divider: #1bba6d;
     --content-box:#d1951b;
     --content-text:#f4f4f4;
     --footer: #107e5f;
@@ -18,7 +84,11 @@
     --url-active:#e7d7cb;
     }
 
-/* ------ Page Layout ----- */
+/* -------------- PAGE LAYOUT - MOBILE ----------------- */
+
+[class*="col-"] {
+    width: 100%;
+  }
 
 * {
     box-sizing: border-box;
@@ -39,41 +109,210 @@ body {
     padding: 5px;
     border: 1px solid red;
 }
-  
-  .col-1 {width: 10%;}
-  .col-2 {width: 20%;}
-  .col-3 {width: 30%;}
-  .col-4 {width: 40%;}
-  .col-5 {width: 50%;}
-  .col-6 {width: 60%;}
-  .col-7 {width: 70%;}
-  .col-8 {width: 80%;}
-  .col-9 {width: 90%;}
-  .col-10 {width: 100%;}
 
 .header {
     background-color: var(--title-box);
     color: #000;
+    text-align: center;
 }
 
 .menu {
-    background-color: var(--sidebar);
+    /* Sidebar/Navbox: */
     color: #ffffff;
 }
 
-.menu ul {
+#navbox {
+    height: 30px;
+    width: 80%;
+    background-color: var(--sidebar);
+}
+
+/*
+ul#navbox {
     list-style-type: none;
     margin: 0;
-    padding: 0;
-  }
+}
+
+ul#navbox ul {
+    height: 100%;
+    width: 300px;
+}
+
+ul#navbox li {
+    display: inline;
+    align-content: center;
+    border-right: 1px solid #bd1919;
+}
+
+ul#navbox li:last-child {
+    border-right: none;
+}*/
+
+.buttongrid {
+	display: grid;
+    grid-gap: 3px;
+	grid-template-columns: repeat(3, 120px);
+    grid-template-rows: 30px 30px;
+    justify-content: center;
+	align-content: center;
+}
+
+/* ------------------- HEADER ----------------- */
+
+h1 {
+	font-family: var(--header-font);
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	color: var(--content-text);
+	border-bottom: 2px solid transparent;
+	border-image: linear-gradient(90deg, rgba(244,244,244,1) 0%, rgba(244,244,244,0.8) 20%, rgba(244,244,244,0.6) 40%, rgba(244,244,244,0.4) 60%, rgba(244,244,244,0.2) 80%, rgba(244,244,244,0) 100%) 1 stretch;
+}
+
+h2 {
+    font-family: var(--header-font);
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	color: var(--content-text);
+	border-bottom: 2px solid transparent;
+	border-image: linear-gradient(90deg, rgba(244,244,244,1) 0%, rgba(244,244,244,0.78) 18%, rgba(244,244,244,0.58) 38%, rgba(244,244,244,0.38) 58%, rgba(244,244,244,0.18) 78%, rgba(244,244,244,0) 98%) 1 stretch;
+}
+
+h3 {
+    font-family: var(--header-font);
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	color: var(--content-text);
+	border-bottom: 2px solid transparent;
+	border-image: linear-gradient(90deg, rgba(244,244,244,1) 0%, rgba(244,244,244,0.74) 14%, rgba(244,244,244,0.54) 34%, rgba(244,244,244,0.34) 54%, rgba(244,244,244,0.14) 74%, rgba(244,244,244,0) 94%) 1 stretch;
+}
+
+h4 {
+    font-family: var(--header-font);
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	color: var(--content-text);
+	border-bottom: 2px solid transparent;
+	border-image: linear-gradient(90deg, rgba(244,244,244,1) 0%, rgba(244,244,244,0.7) 10%, rgba(244,244,244,0.5) 30%, rgba(244,244,244,0.3) 50%, rgba(244,244,244,0.1) 70%, rgba(244,244,244,0) 90%) 1 stretch;
+}
+
+h5 {
+    font-family: var(--header-font);
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	color: var(--content-text);
+	border-bottom: 2px solid transparent;
+	border-image: linear-gradient(90deg, rgba(244,244,244,1) 0%, rgba(244,244,244,0.68) 8%, rgba(244,244,244,0.48) 28%, rgba(244,244,244,0.28) 48%, rgba(244,244,244,0.08) 68%, rgba(244,244,244,0) 88%) 1 stretch;
+}
+
+h6 {
+    font-family: var(--header-font);
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	color: var(--content-text);
+	border-bottom: 2px solid transparent;
+	border-image: linear-gradient(90deg, rgba(244,244,244,1) 0%, rgba(244,244,244,0.64) 4%, rgba(244,244,244,0.44) 24%, rgba(244,244,244,0.24) 44%, rgba(244,244,244,0.04) 64%, rgba(244,244,244,0) 84%) 1 stretch;
+}
+
+/* ---------------- END OF HEADER ------------- */
 
 .main {
-    background-color: var(--content-box);
-    color: #ffffff;
-}
+    /* Content Box: */
+        background-color: var(--content-box);
+        color: #ffffff;
+        font-family: var(--body-font);
+    }
 
 .footer {
     background-color: var(--footer);
     color: #ffffff;
     text-align: center;
-  }
+    font-family: var(--body-font);
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 20%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+
+    .menu {
+        /* Sidebar/Navbox Margin: */
+        margin: 5px;
+    }
+    
+    li {
+        display: block;
+        border: none;
+        padding: 2px;
+      }
+
+    .main {
+    /* Content Box Margin: */
+        margin: 5px;
+    }
+
+    .divider {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 20%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    .menu {
+        /* Sidebar/Navbox Margin: */
+        margin: 5px;
+    }
+    
+    .buttongrid {
+        display: grid;
+        grid-template-columns: 120px 120px;
+        grid-template-rows: 50px 50px;
+        grid-gap: 10px;
+        justify-content: center;
+        align-content: center;
+        padding-top: 5px;
+    }
+
+    /*
+    .buttongrid {
+    display: grid;
+    grid-template-columns: 120px 120px;
+    grid-template-rows: 50px 50px;
+    grid-gap: 10px;
+    justify-content: center;
+    align-content: center;
+    padding-top: 5px;
+    }*/
+
+    li {
+        display: block;
+        border: none;
+        padding: 2px;
+      }
+    
+    .main {
+    /* Content Box Margin: */
+        margin: 5px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+}
