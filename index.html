@@ -62,7 +62,13 @@
     </div>
   </div>
   <div class="footer">
-    <p>Blah</p>
+    <div id="footer"></div>
   </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
+<script> 
+$(function(){
+  $("#footer").load("footer.html");
+});
+</script> 
 </html>
