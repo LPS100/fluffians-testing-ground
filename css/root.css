@@ -68,21 +68,55 @@
 :root{
     --header-font: 'Candara', Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
     --body-font: 'Calibri',Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
-    --background:#2b151f;
-    --title-box: #ddd;
-    --sidebar: #66adb0;
+    --background:#52162e;
+    --title-box: transparent;
+    --sidebar: #010101;
     --divider: #1bba6d;
-    --content-box:#d1951b;
+    --content-box:#c79021;
     --content-text:#f4f4f4;
-    --footer: #107e5f;
+    --text: #ffffff;
+    --footer: #596f1a;
     --shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    --button-box: #cd7ab5;
-    --button-hover: #e2a6d1;
-    --button-active: #7d446d;
-    --url:#fff1e6;
-    --url-hover:#fffaf6;
-    --url-active:#e7d7cb;
-    }
+    --h1-grad: linear-gradient(90deg, #bdc0c2 0%, rgba(189,192,194,0.5) 30%, rgba(189,192,194,0) 70%) 1 stretch;
+    --h2-grad: linear-gradient(90deg, #bdc0c2 0%, rgba(189,192,194,0.5) 30%, rgba(189,192,194,0) 60%) 1 stretch;
+    --h3-grad: linear-gradient(90deg, rgba(189,192,194,1) 0%, rgba(189,192,194,0.5) 30%, rgba(189,192,194,0) 50%) 1 stretch;
+    --h4-grad: linear-gradient(90deg, rgba(189,192,194,1) 0%, rgba(189,192,194,0.5) 20%, rgba(189,192,194,0) 40%) 1 stretch;
+    --h5-grad: linear-gradient(90deg, rgba(189,192,194,1) 0%, rgba(189,192,194,0.5) 10%, rgba(189,192,194,0) 30%) 1 stretch;
+    --h6-grad: linear-gradient(90deg, rgba(189,192,194,1) 0%, rgba(189,192,194,0.5) 5%, rgba(189,192,194,0) 20%) 1 stretch;
+    --grad-width: 3px solid transparent;
+    --button-box: #f4f4f4;
+    --button-hover: #fdfdfd;
+    --button-active: #9cb3a8;
+    --button-border: 2px groove #596f1a;
+    --button-border-hover: 2px groove #89ac29;
+    --button-border-active: 2px groove #3b4a12;
+    --url:#f5e8bc;
+    --url-hover:#efca52;
+    --url-active:#fcec81;
+}
+
+:root.dark-mode{
+    --header-font: 'Candara', Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    --body-font: 'Calibri',Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    --background:#52162e;
+    --title-box: transparent;
+    --sidebar: #010101;
+    --divider: #1bba6d;
+    --content-box:#c79021;
+    --content-text:#f4f4f4;
+    --text: #ffffff;
+    --footer: #596f1a;
+    --shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    --button-box: #f4f4f4;
+    --button-hover: #fdfdfd;
+    --button-active: #9cb3a8;
+    --button-border: 2px groove #596f1a;
+    --button-border-hover: 2px groove #89ac29;
+    --button-border-active: 2px groove #3b4a12;
+    --url:#f5e8bc;
+    --url-hover:#efca52;
+    --url-active:#fcec81;
+}
 
 /* -------------- PAGE LAYOUT - MOBILE ----------------- */
 
@@ -112,13 +146,12 @@ body {
 
 .header {
     background-color: var(--title-box);
-    color: #000;
     text-align: center;
 }
 
 .menu {
     /* Sidebar/Navbox: */
-    color: #ffffff;
+    color: var(--content-text);
 }
 /* NAVBOX [DISABLED]
 #navbox {
@@ -151,14 +184,42 @@ ul#navbox li:last-child {
 .buttongrid {
 	display: grid;
     grid-gap: 3px;
-	grid-template-columns: repeat(auto-fit, minmax(120px, 160px));
-    grid-template-rows: repeat(2, 30px);
+	grid-template-columns: repeat(2, 120px);
+    grid-template-rows: repeat(auto-fit, minmax(30px, 40px));
+    grid-auto-columns: 120px;
+    grid-auto-rows: 30px;
     justify-content: center;
 	align-content: center;
 }
 
-/* ------------------- HEADER ----------------- */
+[class*="button-"] {
+    background-color: var(--button-box);
+    border: var(--button-border);
+    border-radius: 10px;
+    color: var(--content-text)
+}
 
+[class*="button-"]:link,
+[class*="button-"]:visited {
+    background-color: var(--button-box);
+    border: var(--button-border);
+    text-decoration: none;
+}
+
+[class*="button-"]:hover {
+    background-color: var(--button-hover);
+    border: var(--button-border-hover);
+    text-decoration: none;
+}
+
+[class*="button-"]:active {
+    background-color: var(--button-active);
+    border: var(--button-border-active);
+    text-decoration: none;
+}
+
+/* ------------------- HEADER ----------------- */
+/*
 h1 {
 	font-family: var(--header-font);
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -206,41 +267,105 @@ h6 {
 	border-bottom: 2px solid transparent;
 	border-image: linear-gradient(90deg, rgba(244,244,244,1) 0%, rgba(244,244,244,0.64) 4%, rgba(244,244,244,0.44) 24%, rgba(244,244,244,0.24) 44%, rgba(244,244,244,0.04) 64%, rgba(244,244,244,0) 84%) 1 stretch;
 }
+*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--header-font);
+	text-shadow: var(--shadow);
+	color: var(--content-text);
+}
+
+h1:after {
+    content:'';
+    display:block;
+    margin: auto;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    border-image: var(--h1-grad);
+}
+
+h2:after{
+    content:'';
+    display:block;
+    margin: auto;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    border-image: var(--h2-grad);
+}
+
+h3:after{
+    content:'';
+    display:block;
+    margin: auto;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    border-image: var(--h3-grad);
+    
+}
+
+h4:after{
+    content:'';
+    display:block;
+    margin: auto;
+    border: px solid transparent;
+    border-radius: 5px;
+    border-image: var(--h4-grad);
+    
+}
+
+h5:after{
+    content:'';
+    display:block;
+    margin: auto;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    border-image: var(--h5-grad);
+    
+}
+
+h6:after{
+    content:'';
+    display:block;
+    margin: auto;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    border-image: var(--h6-grad);
+    
+}
 
 /* ---------------- END OF HEADER ------------- */
 
 .main {
     /* Content Box: */
         background-color: var(--content-box);
-        color: #ffffff;
+        color: var(--text);
         font-family: var(--body-font);
     }
 
 .footer {
     background-color: var(--footer);
-    color: #ffffff;
+    color: var(--text);
     text-align: center;
     font-family: var(--body-font);
 }
 
 .footer a {
-    color: #f1edd3;
+    color: var(--url);
     text-decoration: none;
 }
 
 .footer a:link, 
 .footer a:visited {
-    color: #f1edd3;
+    color: var(--url);
     text-decoration: none;
 }
 
 .footer a:hover {
-    color: #f5e266;
+    color: var(--url-hover);
     text-decoration: underline;
 }
 
 .footer a:active {
-    color: #baaa46;
+    color: var(--url-active);
     text-decoration: none;
 }
 
