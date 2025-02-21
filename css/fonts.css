@@ -1,0 +1,65 @@
+/*------------- FONT-FACE CANDARA --------------*/
+@font-face {
+    font-family: 'Candara', Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/candara.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Candara', Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/candarab.ttf');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Candara', Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/candarai.ttf');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Candara', Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/candaraz.ttf');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+/*------------- FONT-FACE CALIBRI -------------*/
+@font-face {
+    font-family: 'Calibri',Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/calibri.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calibri',Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/calibrib.ttf');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calibri',Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/calibrii.ttf');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calibri',Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/calibriz.ttf');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}

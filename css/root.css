@@ -1,81 +1,18 @@
-/*------------- FONT-FACE CANDARA --------------*/
-@font-face {
-    font-family: 'Candara', Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
-    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/candara.ttf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Candara', Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
-    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/candarab.ttf');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Candara', Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
-    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/candarai.ttf');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Candara', Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
-    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/candaraz.ttf');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-/*------------- FONT-FACE CALIBRI -------------*/
-@font-face {
-    font-family: 'Calibri',Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
-    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/calibri.ttf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Calibri',Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
-    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/calibrib.ttf');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Calibri',Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
-    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/calibrii.ttf');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Calibri',Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
-    src: url('https://github.com/jondot/dotfiles/blob/master/.fonts/calibriz.ttf');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
+/*------------------- IMPORT SECTION -------------------*/
+@import url(./fonts.css);
 
 /*------------------- ROOT  -------------------*/
 :root{
     --header-font: 'Candara', Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
     --body-font: 'Calibri',Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
-    --background:#52162e;
+    --background:#19191c;
     --title-box: transparent;
-    --sidebar: #010101;
+    --sidebar: #222d5b;
     --divider: #1bba6d;
-    --content-box:#c79021;
-    --content-text:#f4f4f4;
+    --content-box:#292c42;
+    --content-text:#f6fbff;
     --text: #ffffff;
-    --footer: #596f1a;
+    --footer: #222d5b;
     --shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     --h1-grad: linear-gradient(90deg, #bdc0c2 0%, rgba(189,192,194,0.5) 30%, rgba(189,192,194,0) 70%) 1 stretch;
     --h2-grad: linear-gradient(90deg, #bdc0c2 0%, rgba(189,192,194,0.5) 30%, rgba(189,192,194,0) 60%) 1 stretch;
@@ -95,179 +32,57 @@
     --url-active:#fcec81;
 }
 
-:root.dark-mode{
-    --header-font: 'Candara', Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
-    --body-font: 'Calibri',Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
-    --background:#52162e;
-    --title-box: transparent;
-    --sidebar: #010101;
-    --divider: #1bba6d;
-    --content-box:#c79021;
-    --content-text:#f4f4f4;
-    --text: #ffffff;
-    --footer: #596f1a;
-    --shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    --button-box: #f4f4f4;
-    --button-hover: #fdfdfd;
-    --button-active: #9cb3a8;
-    --button-border: 2px groove #596f1a;
-    --button-border-hover: 2px groove #89ac29;
-    --button-border-active: 2px groove #3b4a12;
-    --url:#f5e8bc;
-    --url-hover:#efca52;
-    --url-active:#fcec81;
-}
-
-/* -------------- PAGE LAYOUT - MOBILE ----------------- */
-
-[class*="col-"] {
-    width: 100%;
-  }
+/*-------------- PAGE LAYOUT - FORMAT --------------*/
+/*###################################################*/
+/*##########                               ##########*/
+/*##########   Default format is DESKTOP   ##########*/
+/*##########                               ##########*/
+/*###################################################*/
 
 * {
     box-sizing: border-box;
 }
 
+.left {
+    float: left;
+    width: 20%;
+    padding-left: 10px;
+}
+
+.right {
+	float: left;
+	width: 80%;
+	padding: 0 25px;
+}
+
+.contentleft {
+    padding: 15px;
+    background-color: var(--sidebar);    
+}
+
+.contentright {
+    padding: 10px;
+    background-color: var(--content-box);
+}
+
+.middle::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 body {
     background-color: var(--background);
 }
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-[class*="col-"] {
-    float: left;
-    padding: 5px;
-    border: 1px solid red;
-}
+/*------- HEADER BOX -------*/
 
-.header {
+#header {
     background-color: var(--title-box);
     text-align: center;
 }
 
-.menu {
-    /* Sidebar/Navbox: */
-    color: var(--content-text);
-}
-/* NAVBOX [DISABLED]
-#navbox {
-    height: 30px;
-    width: 80%;
-    background-color: var(--sidebar);
-}
-
-
-ul#navbox {
-    list-style-type: none;
-    margin: 0;
-}
-
-ul#navbox ul {
-    height: 100%;
-    width: 300px;
-}
-
-ul#navbox li {
-    display: inline;
-    align-content: center;
-    border-right: 1px solid #bd1919;
-}
-
-ul#navbox li:last-child {
-    border-right: none;
-}*/
-
-.buttongrid {
-	display: grid;
-    grid-gap: 3px;
-	grid-template-columns: repeat(2, 120px);
-    grid-template-rows: repeat(auto-fit, minmax(30px, 40px));
-    grid-auto-columns: 120px;
-    grid-auto-rows: 30px;
-    justify-content: center;
-	align-content: center;
-}
-
-[class*="button-"] {
-    background-color: var(--button-box);
-    border: var(--button-border);
-    border-radius: 10px;
-    color: var(--content-text)
-}
-
-[class*="button-"]:link,
-[class*="button-"]:visited {
-    background-color: var(--button-box);
-    border: var(--button-border);
-    text-decoration: none;
-}
-
-[class*="button-"]:hover {
-    background-color: var(--button-hover);
-    border: var(--button-border-hover);
-    text-decoration: none;
-}
-
-[class*="button-"]:active {
-    background-color: var(--button-active);
-    border: var(--button-border-active);
-    text-decoration: none;
-}
-
-/* ------------------- HEADER ----------------- */
-/*
-h1 {
-	font-family: var(--header-font);
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-	color: var(--content-text);
-	border-bottom: 2px solid transparent;
-	border-image: linear-gradient(90deg, rgba(244,244,244,1) 0%, rgba(244,244,244,0.8) 20%, rgba(244,244,244,0.6) 40%, rgba(244,244,244,0.4) 60%, rgba(244,244,244,0.2) 80%, rgba(244,244,244,0) 100%) 1 stretch;
-}
-
-h2 {
-    font-family: var(--header-font);
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-	color: var(--content-text);
-	border-bottom: 2px solid transparent;
-	border-image: linear-gradient(90deg, rgba(244,244,244,1) 0%, rgba(244,244,244,0.78) 18%, rgba(244,244,244,0.58) 38%, rgba(244,244,244,0.38) 58%, rgba(244,244,244,0.18) 78%, rgba(244,244,244,0) 98%) 1 stretch;
-}
-
-h3 {
-    font-family: var(--header-font);
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-	color: var(--content-text);
-	border-bottom: 2px solid transparent;
-	border-image: linear-gradient(90deg, rgba(244,244,244,1) 0%, rgba(244,244,244,0.74) 14%, rgba(244,244,244,0.54) 34%, rgba(244,244,244,0.34) 54%, rgba(244,244,244,0.14) 74%, rgba(244,244,244,0) 94%) 1 stretch;
-}
-
-h4 {
-    font-family: var(--header-font);
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-	color: var(--content-text);
-	border-bottom: 2px solid transparent;
-	border-image: linear-gradient(90deg, rgba(244,244,244,1) 0%, rgba(244,244,244,0.7) 10%, rgba(244,244,244,0.5) 30%, rgba(244,244,244,0.3) 50%, rgba(244,244,244,0.1) 70%, rgba(244,244,244,0) 90%) 1 stretch;
-}
-
-h5 {
-    font-family: var(--header-font);
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-	color: var(--content-text);
-	border-bottom: 2px solid transparent;
-	border-image: linear-gradient(90deg, rgba(244,244,244,1) 0%, rgba(244,244,244,0.68) 8%, rgba(244,244,244,0.48) 28%, rgba(244,244,244,0.28) 48%, rgba(244,244,244,0.08) 68%, rgba(244,244,244,0) 88%) 1 stretch;
-}
-
-h6 {
-    font-family: var(--header-font);
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-	color: var(--content-text);
-	border-bottom: 2px solid transparent;
-	border-image: linear-gradient(90deg, rgba(244,244,244,1) 0%, rgba(244,244,244,0.64) 4%, rgba(244,244,244,0.44) 24%, rgba(244,244,244,0.24) 44%, rgba(244,244,244,0.04) 64%, rgba(244,244,244,0) 84%) 1 stretch;
-}
-*/
+/*------- HEADER TEXT -------*/
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--header-font);
 	text-shadow: var(--shadow);
@@ -332,84 +147,175 @@ h6:after{
     
 }
 
-/* ---------------- END OF HEADER ------------- */
+/*------- MENU & BUTTONGRID -------*/
+.menu {
+    color: var(--content-text);
+    /*background-color: var(--sidebar);*/
+}
 
+.buttongrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(115px, 125px));
+    grid-template-rows: repeat(2, 30px);
+    grid-auto-rows: 30px;
+    grid-gap: 5px;
+    justify-content: center;
+    align-content: center;
+}
+
+[class*="button-"] {
+    background-color: var(--button-box);
+    border: var(--button-border);
+    border-radius: 10px;
+    color: var(--content-text);
+}
+
+[class*="button-"]:link,
+[class*="button-"]:visited {
+    background-color: var(--button-box);
+    border: var(--button-border);
+    text-decoration: none;
+}
+
+[class*="button-"]:hover {
+    background-color: var(--button-hover);
+    border: var(--button-border-hover);
+    text-decoration: none;
+}
+
+[class*="button-"]:active {
+    background-color: var(--button-active);
+    border: var(--button-border-active);
+    text-decoration: none;
+}
+
+/*------- BODY DIVIDER -------
+.divider {
+    float: left;
+    width: 2%;
+    padding: 2px;
+}*/
+
+/*------- MAIN CONTENT -------*/
 .main {
-    /* Content Box: */
-        background-color: var(--content-box);
-        color: var(--text);
-        font-family: var(--body-font);
-    }
+    /*background-color: var(--content-box);*/
+    color: var(--text);
+    font-family: var(--body-font);
+}
 
-.footer {
+/*------- FOOTER -------*/
+#footer {
     background-color: var(--footer);
     color: var(--text);
     text-align: center;
     font-family: var(--body-font);
+    width: 80%;
+    margin: auto;
 }
 
-.footer a {
+#footer a {
     color: var(--url);
     text-decoration: none;
 }
 
-.footer a:link, 
-.footer a:visited {
+#footer a:link, 
+#footer a:visited {
     color: var(--url);
     text-decoration: none;
 }
 
-.footer a:hover {
+#footer a:hover {
     color: var(--url-hover);
     text-decoration: underline;
 }
 
-.footer a:active {
+#footer a:active {
     color: var(--url-active);
     text-decoration: none;
 }
 
-/* -------------- PAGE LAYOUT - TABLETS ----------------- */
+/*-------------- PAGE LAYOUT - TABLET --------------*/
+/*###################################################*/
+/*############                           ############*/
+/*############   TABLET-only formating   ############*/
+/*############                           ############*/
+/*###################################################*/
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 768px) {
     .buttongrid {
         display: grid;
-        grid-gap: 3px;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 140px));
-        grid-template-rows: repeat(2, 40px);
-        justify-content: center;
-        align-content: center;
-    }
-}
-
-/* -------------- PAGE LAYOUT - DESKTOP ----------------- */
-
-@media only screen and (min-width: 768px) {
-    .col-1 {width: 2%;}
-    .col-2 {width: 18%;}
-    .col-3 {width: 20%;}
-    .col-4 {width: 30%;}
-    .col-5 {width: 40%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 60%;}
-    .col-8 {width: 70%;}
-    .col-9 {width: 80%;}
-    .col-10 {width: 90%;}
-    .col-11 {width: 95%;}
-    .col-12 {width: 100;}
-    
-    .buttongrid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(115px, 125px));
-        grid-template-rows: repeat(2, 30px);
-        grid-auto-rows: 30px;
         grid-gap: 5px;
+        grid-template-columns: repeat(3, 140px);
+        grid-template-rows: repeat(auto-fit, 40px);
+        grid-auto-columns: 120px;
+        grid-auto-rows: 40px;
         justify-content: center;
         align-content: center;
     }
 
-    .footer{
-        width: 80%;
-        margin: auto;
+    .left, .right, #footer {
+      width: 100%;
+    }
+
+    .right {
+        padding: 0;
+    }
+
+    .left {
+        padding-left: 0px;
+        padding-bottom: 5px;
     }
 }
+
+/*-------------- PAGE LAYOUT - MOBILE --------------*/
+/*###################################################*/
+/*############                           ############*/
+/*############   MOBILE-only formating   ############*/
+/*############                           ############*/
+/*###################################################*/
+
+@media only screen and (max-width: 620px) {
+    .buttongrid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(3, 120px);
+        grid-template-rows: repeat(auto-fit, minmax(30px, 40px));
+        grid-auto-columns: 120px;
+        grid-auto-rows: 40px;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+/*-------------- TRASHBIN --------------*/
+/*######################################*/
+/*#########                    #########*/
+/*#########  Maybe, maybe not  #########*/
+/*#########                    #########*/
+/*######################################*/
+
+/* NAVBOX
+#navbox {
+    height: 30px;
+    width: 80%;
+}
+
+ul#navbox {
+    list-style-type: none;
+    margin: 0;
+}
+
+ul#navbox ul {
+    height: 100%;
+    width: 300px;
+}
+
+ul#navbox li {
+    display: inline;
+    align-content: center;
+    border-right: 1px solid #bd1919;
+}
+
+ul#navbox li:last-child {
+    border-right: none;
+}*/
