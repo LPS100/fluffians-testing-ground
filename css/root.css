@@ -45,19 +45,19 @@
 
 .left {
     float: left;
-    width: 20%;
+    width: 15%;
     padding-left: 10px;
 }
 
 .right {
 	float: left;
-	width: 80%;
+	width: 85%;
 	padding: 0 25px;
 }
 
 .contentleft {
-    padding: 15px;
-    background-color: var(--sidebar);    
+    padding: 10px;
+    background-color: var(--content-box);    
 }
 
 .contentright {
@@ -69,14 +69,13 @@
     content: "";
     display: table;
     clear: both;
-  }
+}
 
 body {
     background-color: var(--background);
 }
 
 /*------- HEADER BOX -------*/
-
 #header {
     background-color: var(--title-box);
     text-align: center;
@@ -121,7 +120,7 @@ h4:after{
     content:'';
     display:block;
     margin: auto;
-    border: px solid transparent;
+    border: 1px solid transparent;
     border-radius: 5px;
     border-image: var(--h4-grad);
     
@@ -147,10 +146,9 @@ h6:after{
     
 }
 
-/*------- MENU & BUTTONGRID -------*/
+/*----------- MENU -----------*/
 .menu {
     color: var(--content-text);
-    /*background-color: var(--sidebar);*/
 }
 
 .buttongrid {
@@ -189,16 +187,8 @@ h6:after{
     text-decoration: none;
 }
 
-/*------- BODY DIVIDER -------
-.divider {
-    float: left;
-    width: 2%;
-    padding: 2px;
-}*/
-
 /*------- MAIN CONTENT -------*/
 .main {
-    /*background-color: var(--content-box);*/
     color: var(--text);
     font-family: var(--body-font);
 }
@@ -209,7 +199,7 @@ h6:after{
     color: var(--text);
     text-align: center;
     font-family: var(--body-font);
-    width: 80%;
+    width: calc(60% - 20px);
     margin: auto;
 }
 
@@ -294,7 +284,7 @@ h6:after{
 /*#########                    #########*/
 /*######################################*/
 
-/* NAVBOX
+/* -------------- NAVBOX --------------
 #navbox {
     height: 30px;
     width: 80%;
